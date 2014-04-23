@@ -128,7 +128,7 @@
 			
 				
 				<bean class="org.jasig.cas.adaptors.jdbc.QueryDatabaseAuthenticationHandler">
-					<property name="sql" value="select psw from user where username=?" />
+					<property name="sql" value="select MD5_PASS from MIS_USER where LOGIN_NAME=?" />
 					<property name="dataSource" ref="dataSource" />
 				</bean>
 			</list>
