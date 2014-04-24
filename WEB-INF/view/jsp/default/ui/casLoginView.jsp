@@ -78,9 +78,9 @@
         var embed = "${param.embed}";
       
         if(embed === "true"){
-        	$("#header").hide();
-        	$("#footer").hide();
-        	
-        	console.log("xxxx");
+
+        }else{
+        	$("#header").show();
+        	$("#footer").show();
         }
       </script>

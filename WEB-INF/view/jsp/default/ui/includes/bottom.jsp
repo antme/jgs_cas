@@ -22,10 +22,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 </div>
-                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
-                   <div id="copyright">
-                        <p>Copyright &copy; 2014 虹口区建筑业管理中心</p>
-                    </div>
+				<div  id="footer1" style="dispaly:none;">
+	                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80" style="dispaly:none;">
+	                   <div id="copyright" >
+	                        <p>Copyright &copy; 2014 虹口区建筑业管理中心</p>
+	                    </div>
+	                </div>
                 </div>
             </div>
         </div>
