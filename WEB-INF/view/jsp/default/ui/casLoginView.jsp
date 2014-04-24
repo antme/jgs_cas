@@ -22,8 +22,8 @@
 
 <c:if test="${not pageContext.request.secure}">
 <div id="msg" class="errors">
-    <h2>Non-secure Connection</h2>
-    <p>You are currently accessing CAS over a non-secure connection.  Single Sign On WILL NOT WORK.  In order to have single sign on work, you MUST log in over HTTPS.</p>
+    <h2>没采用HTTPS连接</h2>
+    <p>请启用服务器HTTPS连接</p>
 </div>
 </c:if>
 
@@ -55,10 +55,7 @@
 						<spring:message code="screen.welcome.label.password.accesskey" var="passwordAccessKey" />
 						<form:password cssClass="required" cssErrorClass="error" id="password" size="25" tabindex="2" path="password"  accesskey="${passwordAccessKey}" htmlEscape="true" autocomplete="off" />
                     </div>
-                    <div class="row check">
-                        <input id="warn" name="warn" value="true" tabindex="3" accesskey="<spring:message code="screen.welcome.label.warn.accesskey" />" type="checkbox" />
-                        <label for="warn"><spring:message code="screen.welcome.label.warn" /></label>
-                    </div>
+               
                     <div class="row btn-row">
 						<input type="hidden" name="lt" value="${loginTicket}" />
 						<input type="hidden" name="execution" value="${flowExecutionKey}" />
@@ -69,73 +66,19 @@
                     </div>
             </form:form>
           </div>
-            <div id="sidebar">
-				<div class="sidebar-content">
-                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80"><spring:message code="screen.welcome.security" /></p>
-                <div id="list-languages" class="fl-panel">
-                <%final String queryString = request.getQueryString() == null ? "" : request.getQueryString().replaceAll("&locale=([A-Za-z][A-Za-z]_)?[A-Za-z][A-Za-z]|^locale=([A-Za-z][A-Za-z]_)?[A-Za-z][A-Za-z]", "");%>
-					<c:set var='query' value='<%=queryString%>' />
-                    <c:set var="xquery" value="${fn:escapeXml(query)}" />
-                  <h3>Languages:</h3>
-                  <c:choose>
-                     <c:when test="${not empty requestScope['isMobile'] and not empty mobileCss}">
-                        <form method="get" action="login?${xquery}">
-                           <select name="locale">
-                               <option value="en">English</option>
-                               <option value="es">Spanish</option>
-                               <option value="fr">French</option>
-                               <option value="ru">Russian</option>
-                               <option value="nl">Nederlands</option>
-                               <option value="sv">Svenska</option>
-                               <option value="it">Italiano</option>
-                               <option value="ur">Urdu</option>
-                               <option value="zh_CN">Chinese (Simplified)</option>
-                               <option value="zh_TW">Chinese (Traditional)</option>
-                               <option value="de">Deutsch</option>
-                               <option value="ja">Japanese</option>
-                               <option value="hr">Croatian</option>
-                               <option value="cs">Czech</option>
-                               <option value="sl">Slovenian</option>
-                               <option value="pl">Polish</option>
-                               <option value="ca">Catalan</option>
-                               <option value="mk">Macedonian</option>
-                               <option value="fa">Farsi</option>
-                               <option value="ar">Arabic</option>
-                               <option value="pt_PT">Portuguese</option>
-                               <option value="pt_BR">Portuguese (Brazil)</option>
-                           </select>
-                           <input type="submit" value="Switch">
-                        </form>
-                     </c:when>
-                     <c:otherwise>
-                        <c:set var="loginUrl" value="login?${xquery}${not empty xquery ? '&' : ''}locale=" />
-						<ul
-							><li class="first"><a href="${loginUrl}en">English</a></li
-							><li><a href="${loginUrl}es">Spanish</a></li
-							><li><a href="${loginUrl}fr">French</a></li
-							><li><a href="${loginUrl}ru">Russian</a></li
-							><li><a href="${loginUrl}nl">Nederlands</a></li
-							><li><a href="${loginUrl}sv">Svenska</a></li
-							><li><a href="${loginUrl}it">Italiano</a></li
-							><li><a href="${loginUrl}ur">Urdu</a></li
-							><li><a href="${loginUrl}zh_CN">Chinese (Simplified)</a></li
-                            ><li><a href="${loginUrl}zh_TW">Chinese (Traditional)</a></li
-							><li><a href="${loginUrl}de">Deutsch</a></li
-							><li><a href="${loginUrl}ja">Japanese</a></li
-							><li><a href="${loginUrl}hr">Croatian</a></li
-							><li><a href="${loginUrl}cs">Czech</a></li
-							><li><a href="${loginUrl}sl">Slovenian</a></li
-                            ><li><a href="${loginUrl}ca">Catalan</a></li
-                            ><li><a href="${loginUrl}mk">Macedonian</a></li
-                            ><li><a href="${loginUrl}fa">Farsi</a></li
-                            ><li><a href="${loginUrl}ar">Arabic</a></li
-                            ><li><a href="${loginUrl}pt_PT">Portuguese</a></li
-                            ><li><a href="${loginUrl}pt_BR">Portuguese (Brazil)</a></li
-							><li class="last"><a href="${loginUrl}pl">Polish</a></li
-						></ul>
-                     </c:otherwise>
-                   </c:choose>
-                </div>
-				</div>
-            </div>
+            
 <jsp:directive.include file="includes/bottom.jsp" />
+
+
+	
+	
+      <script type="text/javascript">
+        var embed = "${param.embed}";
+      
+        if(embed === "true"){
+        	$("#header").hide();
+        	$("#footer").hide();
+        	
+        	console.log("xxxx");
+        }
+      </script>

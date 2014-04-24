@@ -23,19 +23,9 @@
 <!-- FOOTER -->
 
 <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
-                    <a id="jasig" href="http://www.jasig.org" title="go to Jasig home page"></a>
-                    <div>
-                        <h4>Links to CAS Resources:</h4>
-                        <ul id="nav-campus-sites"
-                            ><li><a href="http://www.jasig.org/cas" rel="_blank">Home Page</a>,</li
-                            ><li><a href="http://wiki.jasig.org" rel="_blank">Wiki</a>,</li
-                            ><li><a href="http://issues.jasig.org" rel="_blank">Issue Tracker</a>,</li
-                            ><li><a href="http://www.jasig.org/cas/mailing-lists" rel="_blank">Mailing Lists</a>.</li
-                        ></ul>
-                    </div>
+                   
                     <div id="copyright">
-                        <p>Copyright &copy; 2005 - 2012 Jasig, Inc. All rights reserved.</p>
-                        <p>Powered by <a href="http://www.jasig.org/cas">Jasig Central Authentication Service <%=org.jasig.cas.CasVersion.getVersion()%></a></p>
+                        <p>Copyright &copy; 2014 虹口区建筑业管理中心</p>
                     </div>
                 </div>
 </body>

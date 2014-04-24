@@ -125,7 +125,8 @@
 					| local authentication strategy.  You might accomplish this by coding a new such handler and declaring
 					| edu.someschool.its.cas.MySpecialHandler here, or you might use one of the handlers provided in the adaptors modules.
 					+-->
-			
+			<bean 
+					class="org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler" />
 				
 				<bean class="org.jasig.cas.adaptors.jdbc.QueryDatabaseAuthenticationHandler">
 					<property name="sql" value="select MD5_PASS from MIS_USER where LOGIN_NAME=?" />

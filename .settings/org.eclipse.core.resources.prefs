@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//WEB-INF/view/jsp/default/ui/casLoginView.jsp=UTF-8
+encoding//WEB-INF/view/jsp/default/ui/includes/bottom.jsp=UTF-8
+encoding//WEB-INF/view/jsp/services/includes/bottom.jsp=UTF-8
 encoding/<project>=UTF-8
