@@ -76,11 +76,15 @@
 	
       <script type="text/javascript">
         var embed = "${param.embed}";
-      
+        var service = "${param.service}";
         if(embed === "true"){
 
         }else{
         	$("#header").show();
         	$("#footer").show();
+        }
+        
+        if(service === ""){
+			//window.location.href="http://www.hkjgzx.sh.cn";
         }
       </script>
