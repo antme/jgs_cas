@@ -174,7 +174,6 @@
 		<property name="resultAttributeMapping">
 			<map>
 				<entry key="USER_TYPE_NAME" value="USER_TYPE_NAME" />
-				<entry key="LOGIN_NAME" value="LOGIN_NAME" />
 			</map>
 		</property>
 
