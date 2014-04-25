@@ -163,7 +163,7 @@
 
 		<constructor-arg index="0" ref="dataSource" />
 		<constructor-arg index="1"
-			value="select USER_TYPE_NAME from MIS_USER where {0}" />
+			value="select USER_TYPE_NAME, LOGIN_NAME from MIS_USER where {0}" />
 
 		<property name="queryAttributeMapping">
 			<map>
@@ -173,8 +173,8 @@
 
 		<property name="resultAttributeMapping">
 			<map>
-				<entry key="LOGIN_NAME" value="username" />
 				<entry key="USER_TYPE_NAME" value="USER_TYPE_NAME" />
+				<entry key="LOGIN_NAME" value="LOGIN_NAME" />
 			</map>
 		</property>
 
@@ -224,6 +224,12 @@
                         <property name="description" value="Allows HTTP(S) and IMAP(S) protocols" />
                         <property name="serviceId" value="^(https?|imaps?)://.*" />
                         <property name="evaluationOrder" value="10000001" />
+                        <property name="allowedAttributes">
+					    <list>
+					       <value>LOGIN_NAME</value>
+					       <value>USER_TYPE_NAME</value>
+					    </list>             
+					   </property>
                     </bean>
                     <!--
                     Use the following definition instead of the above to further restrict access
