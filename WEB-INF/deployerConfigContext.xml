@@ -156,6 +156,30 @@
 		</property>
 	</bean>
 
+
+	<bean
+		class="org.jasig.services.persondir.support.jdbc.SingleRowJdbcPersonAttributeDao"
+		id="attributeRepository">
+
+		<constructor-arg index="0" ref="dataSource" />
+		<constructor-arg index="1"
+			value="select USER_TYPE_NAME from MIS_USER where {0}" />
+
+		<property name="queryAttributeMapping">
+			<map>
+				<entry key="username" value="LOGIN_NAME" />
+			</map>
+		</property>
+
+		<property name="resultAttributeMapping">
+			<map>
+				<entry key="LOGIN_NAME" value="username" />
+				<entry key="USER_TYPE_NAME" value="USER_TYPE_NAME" />
+			</map>
+		</property>
+
+	</bean>
+
 	<!--
 	This bean defines the security roles for the Services Management application.  Simple deployments can use the in-memory version.
 	More robust deployments will want to use another option, such as the Jdbc version.
@@ -171,7 +195,7 @@
 	<!-- 
 	Bean that defines the attributes that a service may return.  This example uses the Stub/Mock version.  A real implementation
 	may go against a database or LDAP server.  The id should remain "attributeRepository" though.
-	 -->
+	
 	<bean id="attributeRepository"
 		class="org.jasig.services.persondir.support.StubPersonAttributeDao">
 		<property name="backingMap">
@@ -182,7 +206,7 @@
 			</map>
 		</property>
 	</bean>
-	
+	 -->
 	<!-- 
 	Sample, in-memory data store for the ServiceRegistry. A real implementation
 	would probably want to replace this with the JPA-backed ServiceRegistry DAO
