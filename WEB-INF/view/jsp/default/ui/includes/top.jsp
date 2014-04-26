@@ -46,6 +46,6 @@
     <div class="flc-screenNavigator-view-container">
         <div class="fl-screenNavigator-view">
             <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table" style="dispaly:none;">
-                <h1 id="app-name" class="fl-table-cell">虹口区建筑业管理登录中心</h1>
+               
             </div>		
             <div id="content" class="fl-screenNavigator-scroll-container">

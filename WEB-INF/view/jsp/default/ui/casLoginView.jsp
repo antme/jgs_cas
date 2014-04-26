@@ -28,7 +28,7 @@
     <p>请启用服务器HTTPS连接</p>
 </div>
 </c:if>
-
+  <div class="titles">
   <div class="box fl-panel" id="login">
 			<form:form method="post" id="fm1" cssClass="fm-v clearfix" commandName="${commandName}" htmlEscape="true">
                   <form:errors path="*" id="msg" cssClass="errors" element="div" />
@@ -65,10 +65,11 @@
 
                         <input class="btn-submit" name="submit" accesskey="l" value="<spring:message code="screen.welcome.button.login" />" tabindex="4" type="submit" />
                         <input class="btn-reset" name="reset" accesskey="c" value="<spring:message code="screen.welcome.button.clear" />" tabindex="5" type="reset" />
+                        <a class="##" href="localhost">返回门户</a>
                     </div>
             </form:form>
           </div>
-            
+     </div>       
 <jsp:directive.include file="includes/bottom.jsp" />
 
 
