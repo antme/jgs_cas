@@ -23,6 +23,9 @@
 	    <link rel="icon" href="<c:url value="/favicon.ico" />" type="image/x-icon" />
 	</head>
 	<body id="cas" class="fl-theme-iphone">
+	
+	
+	<c:if test="${not param.embed}">
     <div class="flc-screenNavigator-view-container">
         <div class="fl-screenNavigator-view">
             <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table" style="dispaly:none;">
@@ -31,11 +34,11 @@
             <div id="content" class="fl-screenNavigator-scroll-container">
 
 
+
+
+
 <c:if test="${not pageContext.request.secure}">
-<div id="msg" class="errors">
-    <h2>没采用HTTPS连接</h2>
-    <p>请启用服务器HTTPS连接</p>
-</div>
+
 </c:if>
   <div class="titles">
   <div class="box fl-panel" id="login">
@@ -57,12 +60,6 @@
                     </div>
                     <div class="row fl-controls-left">
                         <label for="password" class="fl-label"><spring:message code="screen.welcome.label.password" /></label>
-						<%--
-						NOTE: Certain browsers will offer the option of caching passwords for a user.  There is a non-standard attribute,
-						"autocomplete" that when set to "off" will tell certain browsers not to prompt to cache credentials.  For more
-						information, see the following web page:
-						http://www.geocities.com/technofundo/tech/web/ie_autocomplete.html
-						--%>
 						<spring:message code="screen.welcome.label.password.accesskey" var="passwordAccessKey" />
 						<form:password cssClass="required" cssErrorClass="error" id="password" size="25" tabindex="2" path="password"  accesskey="${passwordAccessKey}" htmlEscape="true" autocomplete="off" />
                     </div>
@@ -94,6 +91,15 @@
         <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="/js/cas.js"></script>
+        
+</c:if>
+
+<c:if test="${param.embed}">
+	<jsp:directive.include file="casLoginViewembed.jsp" />
+
+</c:if>
+
+
     </body>
 </html>
 
