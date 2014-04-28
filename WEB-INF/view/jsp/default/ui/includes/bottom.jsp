@@ -33,7 +33,7 @@
         </div>
         <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="<c:url value="/js/cas.js" />"></script>
+        <script type="text/javascript" src="/js/cas.js"></script>
     </body>
 </html>
 
