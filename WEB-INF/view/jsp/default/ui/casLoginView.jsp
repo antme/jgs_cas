@@ -7,7 +7,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <spring:theme code="mobile.custom.css.file" var="mobileCss" text="" />
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 	<head>
 	    <title>虹口区建筑业管理登录中心</title>
         <c:if test="${not empty requestScope['isMobile'] and not empty mobileCss}">
@@ -20,7 +20,6 @@
         </c:if>
 		<spring:theme code="standard.custom.css.file" var="customCssFile" />
         <link type="text/css" rel="stylesheet" href="<c:url value="${customCssFile}" />" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	    <link rel="icon" href="<c:url value="/favicon.ico" />" type="image/x-icon" />
 	</head>
 	<body id="cas" class="fl-theme-iphone">
@@ -83,7 +82,7 @@
    
 
 </div>
-				<div  id="footer1" style="dispaly:none;">
+				<div  id="footer1">
 	                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80" style="dispaly:none;">
 	                   <div id="copyright" >
 	                        <p>Copyright &copy; 2014 虹口区建筑业管理中心</p>
