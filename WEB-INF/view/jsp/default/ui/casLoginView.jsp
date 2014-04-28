@@ -95,7 +95,7 @@
 </c:if>
 
 <c:if test="${param.embed}">
-	<jsp:directive.include file="casLoginViewembed.jsp" />
+	<jsp:directive.include file="casLoginVieweJgs.jsp" />
 
 </c:if>
 
