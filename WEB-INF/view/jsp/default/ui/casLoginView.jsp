@@ -65,7 +65,7 @@
 
                         <input class="btn-submit" name="submit" accesskey="l" value="<spring:message code="screen.welcome.button.login" />" tabindex="4" type="submit" />
                         <input class="btn-reset" name="reset" accesskey="c" value="<spring:message code="screen.welcome.button.clear" />" tabindex="5" type="reset" />
-                        <a class="http://www.hkjgzx.sh.cn/" href="localhost">返回门户</a>
+                        <a class="" href="http://www.hkjgzx.sh.cn">返回门户</a>
                     </div>
             </form:form>
           </div>
