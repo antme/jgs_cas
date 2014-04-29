@@ -1,14 +1,11 @@
 
-<div class="flc-screenNavigator-view-container">
-  <div class="fl-screenNavigator-view">
     
-    <div id="content" class="fl-screenNavigator-scroll-container">
+    <div id="content-jgs" class="fl-jgs-screenNavigator-scroll-container" style="width:300px;">
 
- 	 <div class="box fl-panel" id="login">
+ 	 <div class="box fl-panel" id="login-jgs">
 			<form:form method="post" id="fm1" cssClass="fm-v clearfix" commandName="${commandName}" htmlEscape="true">
                   <form:errors path="*" id="msg" cssClass="errors" element="div" />
                 <!-- <spring:message code="screen.welcome.welcome" /> -->
-                    <h2><spring:message code="screen.welcome.instructions" /></h2>
                     <div class="row fl-controls-left">
                         <label for="username" class="fl-label"><spring:message code="screen.welcome.label.netid" /></label>
 						<c:if test="${not empty sessionScope.openIdLocalId}">
@@ -44,8 +41,6 @@
             </form:form>
           </div>
      </div>   
-   </div>
-</div>
 <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/js/cas.js"></script>
