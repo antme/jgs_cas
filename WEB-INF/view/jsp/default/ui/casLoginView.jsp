@@ -25,7 +25,7 @@
 	<body id="cas" class="fl-theme-iphone">
 	
 	
-	<c:if test="${not param.embed}">
+<c:if test="${not param.embed}">
     <div class="flc-screenNavigator-view-container">
         <div class="fl-screenNavigator-view">
             <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table" style="dispaly:none;">

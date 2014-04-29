@@ -1,6 +1,6 @@
 
     
-    <div id="content-jgs" class="fl-jgs-screenNavigator-scroll-container" style="width:300px;">
+    <div id="content-jgs" class="fl-jgs-screenNavigator-scroll-container" style="width:267px;">
 
  	 <div class="box fl-panel" id="login-jgs">
 			<form:form method="post" id="fm1" cssClass="fm-v clearfix" commandName="${commandName}" htmlEscape="true">
