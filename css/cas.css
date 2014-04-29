@@ -52,7 +52,11 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; marg
 input, select { vertical-align: middle; }
 
 /* general page */
-body { font-family: Verdana, sans-serif; font-size: 11px; line-height: 1.4em; background:url(../images/bg2.jpg) repeat-x;}
+body { font-family: Verdana, sans-serif; font-size: 11px; line-height: 1.4em; }
+.cas_bg {
+	
+	background:url(../images/bg2.jpg) repeat-x;
+}
 
 #cas { }
 #cas .flc-screenNavigator-view-container { width: 1000px; margin: 0 auto; }

@@ -23,10 +23,11 @@
         <link type="text/css" rel="stylesheet" href="<c:url value="${customCssFile}" />" />
 	    <link rel="icon" href="<c:url value="/favicon.ico" />" type="image/x-icon" />
 	</head>
-	<body id="cas" class="fl-theme-iphone">
+
 	
 	
 <c:if test="${not param.embed}">
+	<body id="cas" class="fl-theme-iphone cas_bg">
     <div class="flc-screenNavigator-view-container">
         <div class="fl-screenNavigator-view">
             <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table" style="dispaly:none;">
@@ -92,16 +93,17 @@
         <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="/js/cas.js"></script>
-        
+    </body>     
 </c:if>
-
+  
 <c:if test="${param.embed}">
-	<jsp:directive.include file="casLoginVieweJgs.jsp" />
-
+	<body id="cas" class="fl-theme-iphone">
+		<jsp:directive.include file="casLoginVieweJgs.jsp" />
+	</body>  
 </c:if>
 
 
-    </body>
+ 
 </html>
 
 
