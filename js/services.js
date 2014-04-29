@@ -55,7 +55,6 @@ function updateRegisteredServiceOrder(movedService, pos) {
 		error: 
 			function(jqXHR, textStatus, errorThrown) {
 				$("#errorsDiv").show();
-				console.log(data.error);
 			}
 	});
 	return result;
